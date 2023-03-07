@@ -1,17 +1,19 @@
 <?php
 
+require_once __DIR__.'/Categoria.php';
+
 class ProdottiGenerici {
     public $prezzo;
     public $quantità;
-    public $tipologia;
-    public $novità;
-    public $scontato;
+    public $categoria;
+    public $immagine;
+    public $nome;
 
-    public function __construct($prezzo, $quantità, $tipologia, $novità, $scontato) {
+    public function __construct($prezzo, $quantità, Categoria $categoria, $immagine, $nome) {
         $this->prezzo = $prezzo;
         $this->quantità = $quantità;
-        $this->tipologia = $tipologia;
-        $this->novità = $novità;
-        $this->scontato = $scontato;
+        $this->categoria = $categoria;
+        $this->immagine = $immagine;
+        $this->nome = $nome;
     }
 }
