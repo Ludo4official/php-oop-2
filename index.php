@@ -61,6 +61,9 @@ $prodotti[] = new Cibo (3, 95, $categoriaGatti, 'https://qz-petshop.com/7109-hom
                                 <?php if (is_a($ProdottiGenerici, 'Gioco')) { ?>
                                 <p>Materiale: <?php echo $ProdottiGenerici->materiale; ?></p>
                                 <?php } ?>
+                                <?php if (is_a($ProdottiGenerici, 'Cibo')) { ?>
+                                <p>Peso: <?php echo $ProdottiGenerici->getPeso(); ?></p>
+                                <?php } ?>
                                 <a href="#" class="btn btn-primary">$<?php echo $ProdottiGenerici->prezzo; ?></a>
                             </div>
                         </div>
